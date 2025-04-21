@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eco Products</title>
+  <link rel="stylesheet" href="products.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>🌿 Eco Products</h1>
+    <p>Browse and add eco-friendly products to your cart</p>
+  </header>
+
+  <div class="filter-container">
+    <label for="categoryFilter">Filter by Category:</label>
+    <select id="categoryFilter">
+      <option value="All">All</option>
+      <option value="Clothing">Clothing</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Accessories">Accessories</option>
+      <option value="Outdoor">Outdoor</option>
+      <option value="Home">Home</option>
+      <option value="Kitchen">Kitchen</option>
+      <option value="Personal Care">Personal Care</option>
+    </select>
+  </div>
+
+  <main class="products-container" id="productList">
+    <!-- Product cards will be loaded here dynamically -->
+  </main>
+
+  <div class="cart-container">
+    <h3>Shopping Cart</h3>
+    <ul id="cartList"></ul>
+    <button id="checkoutBtn" onclick="window.location.href='checkout.html'">Checkout</button>
+
+  </div>
+<script src="products.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eco Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">EcoSystem 🌿</div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
+        <li><a href="#features" onclick="scrollToSection('features')">Features</a></li>
+        <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="hero" id="home">
+      <h1>Empowering Sustainability</h1>
+      <p>Connecting eco-conscious people with green solutions.</p>
+      <a href="#features" class="cta-btn" onclick="scrollToSection('features')">Explore Now</a>
+    </section>
+  </header>
+
+  <main>
+    <section id="features" class="features"></section>
+  </main>
+
+  <footer id="contact">
+    <p>&copy; 2025 Eco Management System | Designed by Nithish</p>
+    <p><a href="#">Contact Us</a> | <a href="#">Privacy Policy</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
