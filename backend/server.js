@@ -17,10 +17,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../frontend')));
 
 // ✅ Then register your routes
-app.use('/api', require('./authRoutes'));
+app.use('/api', require('./routes/authRoutes'));
 app.use('/api', require('./routes/productRoutes'));
 app.use('/api', require('./routes/cartRoutes'));
-
+app.use('/api', require('./routes/recycleRoutes'));
+app.use('/api/events', require('./routes/greenEventsRoutes'));
+app.use('/api', require('./routes/carbonRoutes'))
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carbon Insights</title>
+  <link rel="stylesheet" href="css/carbon.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Carbon Footprint Insights</h1>
+    <form id="carbon-form">
+
+      <div class="question">
+        <p>How much electricity do you use each month?</p>
+        <label><input type="radio" name="electricity" value="Low"> Low (0-200 kWh)</label>
+        <label><input type="radio" name="electricity" value="Medium"> Medium (201-500 kWh)</label>
+        <label><input type="radio" name="electricity" value="High"> High (501+ kWh)</label>
+      </div>
+
+      <div class="question">
+        <p>What type of vehicle do you primarily use?</p>
+        <label><input type="radio" name="vehicle" value="Gasoline"> Gasoline or Diesel Car</label>
+        <label><input type="radio" name="vehicle" value="Electric"> Electric Car</label>
+        <label><input type="radio" name="vehicle" value="Public"> Public Transport</label>
+        <label><input type="radio" name="vehicle" value="Bicycle"> Bicycle/Walking</label>
+      </div>
+
+      <div class="question">
+        <p>How often do you fly in a year?</p>
+        <label><input type="radio" name="flights" value="Never"> Never</label>
+        <label><input type="radio" name="flights" value="1-2"> 1-2 times</label>
+        <label><input type="radio" name="flights" value="3-5"> 3-5 times</label>
+        <label><input type="radio" name="flights" value="More than 5"> More than 5 times</label>
+      </div>
+
+      <div class="question">
+        <p>What type of diet do you follow?</p>
+        <label><input type="radio" name="diet" value="Vegetarian"> Vegetarian</label>
+        <label><input type="radio" name="diet" value="Non-Vegetarian"> Non-Vegetarian</label>
+        <label><input type="radio" name="diet" value="Vegan"> Vegan</label>
+        <label><input type="radio" name="diet" value="Balanced"> Balanced</label>
+      </div>
+
+      <div class="question">
+        <p>How much food do you waste each week?</p>
+        <label><input type="radio" name="foodWaste" value="None"> None</label>
+        <label><input type="radio" name="foodWaste" value="Small"> A small amount</label>
+        <label><input type="radio" name="foodWaste" value="Moderate"> Moderate</label>
+        <label><input type="radio" name="foodWaste" value="Large"> Large amount</label>
+      </div>
+
+      <div class="question">
+        <p>How do you heat your home?</p>
+        <label><input type="radio" name="heating" value="Gas"> Gas</label>
+        <label><input type="radio" name="heating" value="Electric (non-renewable)"> Electric (non-renewable)</label>
+        <label><input type="radio" name="heating" value="Electric (renewable)"> Electric (renewable)</label>
+        <label><input type="radio" name="heating" value="Other"> Other</label>
+      </div>
+
+      <div class="question">
+        <p>Do you conserve water at home?</p>
+        <label><input type="radio" name="waterConservation" value="Always"> Always</label>
+        <label><input type="radio" name="waterConservation" value="Sometimes"> Sometimes</label>
+        <label><input type="radio" name="waterConservation" value="Rarely"> Rarely</label>
+        <label><input type="radio" name="waterConservation" value="Never"> Never</label>
+      </div>
+
+      <div class="question">
+        <p>Do you recycle?</p>
+        <label><input type="radio" name="recycling" value="Yes"> Yes, always</label>
+        <label><input type="radio" name="recycling" value="Sometimes"> Sometimes</label>
+        <label><input type="radio" name="recycling" value="No"> No</label>
+      </div>
+
+      <div class="question">
+        <p>Do you purchase eco-friendly products?</p>
+        <label><input type="radio" name="ecoFriendly" value="Always"> Always</label>
+        <label><input type="radio" name="ecoFriendly" value="Sometimes"> Sometimes</label>
+        <label><input type="radio" name="ecoFriendly" value="Rarely"> Rarely</label>
+        <label><input type="radio" name="ecoFriendly" value="Never"> Never</label>
+      </div>
+
+      <div class="question">
+        <p>Do you engage in green activities?</p>
+        <label><input type="radio" name="greenActivities" value="Yes, regularly"> Yes, regularly</label>
+        <label><input type="radio" name="greenActivities" value="Yes, occasionally"> Yes, occasionally</label>
+        <label><input type="radio" name="greenActivities" value="No"> No</label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="result-box" style="display:none;">
+      <!-- <h2>Your Carbon Score</h2> -->
+      <p><span id="score"></span></p>
+      <p id="message"></p> <!-- Added message to display feedback -->
+    </div>
+  </div>
+
+  <script src="js/carbon.js"></script>
+</body>
+</html>

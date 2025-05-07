@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+</head>
+<body>
+  <h2>Admin Dashboard - Recycle Requests</h2>
+  <div id="adminList"></div>
+
+  <script>
+    const backendURL = 'http://localhost:3000/api';
+
+    async function loadAdminRequests() {
+      const res = await fetch(`${backendURL}/admin/requests`);
+      const requests = await res.json();
+
+      const list = document.getElementById('adminList');
+      list.innerHTML = '';
+
+      requests.forEach(req => {
+        const div = document.createElement('div');
+        div.innerHTML = `
+          <p><strong>${req.user_email}</strong> - ${req.waste_type} in ${req.area}</p>
+          <p>Status: 
+            <select onchange="updateStatus(${req.id}, this.value)">
+              <option ${req.status === 'Pending' ? 'selected' : ''}>Pending</option>
+              <option ${req.status === 'In Progress' ? 'selected' : ''}>In Progress</option>
+              <option ${req.status === 'Completed' ? 'selected' : ''}>Completed</option>
+            </select>
+          </p>
+          <hr>
+        `;
+        list.appendChild(div);
+      });
+    }
+
+    async function updateStatus(id, status) {
+      await fetch(`${backendURL}/admin/update-status`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id, status })
+      });
+      loadAdminRequests();
+    }
+
+    loadAdminRequests();
+  </script>
+</body>
+</html>

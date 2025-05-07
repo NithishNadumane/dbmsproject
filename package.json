@@ -1,10 +1,9 @@
-
 {
   "name": "dbmsproject",
   "version": "1.0.0",
   "main": "backend/server.js",
   "scripts": {
-    "start": "node backend/server.js"
+    "start": "nodemon backend/server.js"
   },
   "type": "commonjs",
   "dependencies": {
@@ -14,5 +13,8 @@
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "pg": "^8.14.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }

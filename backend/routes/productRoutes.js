@@ -9,8 +9,10 @@ router.get('/products', async (req, res) => {
     const values = [];
 
     if (category && category !== 'All') {
-      query += ' WHERE category = $1';
+      query += ' WHERE category = $1 ORDER BY id'; // Consistent order within category
       values.push(category);
+    } else {
+      query += ' ORDER BY id'; // Consistent order for all products
     }
 
     const result = await pool.query(query, values);

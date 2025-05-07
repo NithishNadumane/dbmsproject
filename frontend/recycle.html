@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recycle Tracker</title>
+  <link rel="stylesheet" href="css/recycle.css">
+</head>
+<body>
+  <h2>♻️ Recycle Pickup Request</h2>
+  <form id="pickupForm">
+    <label>Waste Type:</label>
+    <div id="wasteCheckboxes">
+      <label><input type="checkbox" name="waste" value="Plastic"> Plastic</label>
+      <label><input type="checkbox" name="waste" value="Paper"> Paper</label>
+      <label><input type="checkbox" name="waste" value="Metal"> Metal</label>
+      <label><input type="checkbox" name="waste" value="E-Waste"> E-Waste</label>
+      <label><input type="checkbox" name="waste" value="Glass"> Glass</label>
+      <label><input type="checkbox" name="waste" value="Organic"> Organic</label>
+    </div>
+    
+    
+
+    <label for="area">Select Area:</label>
+<select id="area" required>
+  <option value="">--Select--</option>
+  <option>Kuvempunagar</option>
+  <option>Saraswathipuram</option>
+  <option>Vijayanagar</option>
+  <option>Jayanagar</option>
+  <option>Gokulam</option>
+  <option>Hebbal</option>
+  <option>Nazarbad</option>
+  <option>Chamundipuram</option>
+  <option>Metagalli</option>
+  <option>Rajeevnagar</option>
+  <option>Hootagalli</option>
+</select>
+
+    <button type="submit">Request Pickup</button>
+  </form>
+
+  <h3>Your Pickup Requests</h3>
+  <div id="requestList"></div>
+
+  <script src="js/recycle.js"></script>
+</body>
+</html>
